@@ -19,3 +19,10 @@ https://servicedesk.boozallencsn.com/rest/api/2/issue/CR-3967/comment/
 
 #returns only that comment
 https://servicedesk.boozallencsn.com/rest/api/2/issue/CR-3967/comment/158648
+
+#find VCD issue of type CR simple that is approved and in progress and matches our text -  can also add assinged to core services
+Get-JiraIssue -Query "issuetype = Simple AND status = `"Approved and In Progress`" AND text ~ `"Priority: CSN Virtual Cloud Defense`" order by created DESC"
+
+#building the whole thing out as a service
+
+https://4sysops.com/archives/how-to-run-a-powershell-script-as-a-windows-service/
